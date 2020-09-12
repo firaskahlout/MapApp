@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1831EE0F250D07B000C24A3A /* Location+CoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831EE0D250D07B000C24A3A /* Location+CoreData.swift */; };
+		1831EE12250D087200C24A3A /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1831EE11250D087200C24A3A /* DataManager.swift */; };
 		1892FEBC2503C6AE00C02C1D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892FEBB2503C6AE00C02C1D /* AppDelegate.swift */; };
 		1892FEBE2503C6AE00C02C1D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892FEBD2503C6AE00C02C1D /* SceneDelegate.swift */; };
 		1892FEC02503C6AE00C02C1D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892FEBF2503C6AE00C02C1D /* ViewController.swift */; };
@@ -16,9 +18,12 @@
 		1892FEE02503C93E00C02C1D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1892FEDF2503C93E00C02C1D /* LaunchScreen.storyboard */; };
 		1892FEE42503E6FD00C02C1D /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892FEE22503E6FD00C02C1D /* ActionsViewController.swift */; };
 		1892FEE52503E6FD00C02C1D /* ActionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1892FEE32503E6FD00C02C1D /* ActionsViewController.xib */; };
+		18CDE642250D4EEC006DFAAB /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CDE641250D4EEC006DFAAB /* LocationItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1831EE0D250D07B000C24A3A /* Location+CoreData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Location+CoreData.swift"; sourceTree = "<group>"; };
+		1831EE11250D087200C24A3A /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		1892FEB82503C6AE00C02C1D /* MapApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MapApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1892FEBB2503C6AE00C02C1D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1892FEBD2503C6AE00C02C1D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -30,6 +35,7 @@
 		1892FEDF2503C93E00C02C1D /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1892FEE22503E6FD00C02C1D /* ActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
 		1892FEE32503E6FD00C02C1D /* ActionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionsViewController.xib; sourceTree = "<group>"; };
+		18CDE641250D4EEC006DFAAB /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,8 +70,9 @@
 			children = (
 				1892FED22503C7A300C02C1D /* Application */,
 				1892FED32503C7B700C02C1D /* Flows */,
+				18CDE643250D7176006DFAAB /* Commons */,
 				1892FED52503C7EE00C02C1D /* Resources */,
-				1892FED42503C7E000C02C1D /* Supporting */,
+				1892FED42503C7E000C02C1D /* Supporting Files */,
 			);
 			path = MapApp;
 			sourceTree = "<group>";
@@ -82,6 +89,7 @@
 		1892FED32503C7B700C02C1D /* Flows */ = {
 			isa = PBXGroup;
 			children = (
+				189BE07D250CEC46009600AC /* Model */,
 				1892FEE12503E6BE00C02C1D /* Actions View */,
 				1892FEDD2503C93500C02C1D /* Main.storyboard */,
 				1892FEBF2503C6AE00C02C1D /* ViewController.swift */,
@@ -89,14 +97,14 @@
 			path = Flows;
 			sourceTree = "<group>";
 		};
-		1892FED42503C7E000C02C1D /* Supporting */ = {
+		1892FED42503C7E000C02C1D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
 				1892FEDF2503C93E00C02C1D /* LaunchScreen.storyboard */,
 				1892FECC2503C6B100C02C1D /* Info.plist */,
 				1892FEC42503C6AE00C02C1D /* MapApp.xcdatamodeld */,
 			);
-			path = Supporting;
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		1892FED52503C7EE00C02C1D /* Resources */ = {
@@ -114,6 +122,23 @@
 				1892FEE32503E6FD00C02C1D /* ActionsViewController.xib */,
 			);
 			path = "Actions View";
+			sourceTree = "<group>";
+		};
+		189BE07D250CEC46009600AC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1831EE0D250D07B000C24A3A /* Location+CoreData.swift */,
+				18CDE641250D4EEC006DFAAB /* LocationItem.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		18CDE643250D7176006DFAAB /* Commons */ = {
+			isa = PBXGroup;
+			children = (
+				1831EE11250D087200C24A3A /* DataManager.swift */,
+			);
+			path = Commons;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,10 +213,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1831EE0F250D07B000C24A3A /* Location+CoreData.swift in Sources */,
 				1892FEC02503C6AE00C02C1D /* ViewController.swift in Sources */,
 				1892FEBC2503C6AE00C02C1D /* AppDelegate.swift in Sources */,
 				1892FEC62503C6AE00C02C1D /* MapApp.xcdatamodeld in Sources */,
 				1892FEE42503E6FD00C02C1D /* ActionsViewController.swift in Sources */,
+				18CDE642250D4EEC006DFAAB /* LocationItem.swift in Sources */,
+				1831EE12250D087200C24A3A /* DataManager.swift in Sources */,
 				1892FEBE2503C6AE00C02C1D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -319,7 +347,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4BQV5QR97;
-				INFOPLIST_FILE = MapApp/Supporting/Info.plist;
+				INFOPLIST_FILE = "MapApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -337,7 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S4BQV5QR97;
-				INFOPLIST_FILE = MapApp/Supporting/Info.plist;
+				INFOPLIST_FILE = "MapApp/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
