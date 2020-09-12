@@ -19,6 +19,12 @@
 		1892FEE42503E6FD00C02C1D /* ActionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1892FEE22503E6FD00C02C1D /* ActionsViewController.swift */; };
 		1892FEE52503E6FD00C02C1D /* ActionsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1892FEE32503E6FD00C02C1D /* ActionsViewController.xib */; };
 		18CDE642250D4EEC006DFAAB /* LocationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CDE641250D4EEC006DFAAB /* LocationItem.swift */; };
+		18CDE64B250D7F6B006DFAAB /* addTitle.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CDE645250D7F6B006DFAAB /* addTitle.png */; };
+		18CDE64C250D7F6B006DFAAB /* savedDetails.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CDE646250D7F6B006DFAAB /* savedDetails.png */; };
+		18CDE64D250D7F6B006DFAAB /* currentLocation.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CDE647250D7F6B006DFAAB /* currentLocation.png */; };
+		18CDE64E250D7F6B006DFAAB /* locationSaved.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CDE648250D7F6B006DFAAB /* locationSaved.png */; };
+		18CDE64F250D7F6B006DFAAB /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CDE649250D7F6B006DFAAB /* share.png */; };
+		18CDE650250D7F6B006DFAAB /* notSavedDetails.png in Resources */ = {isa = PBXBuildFile; fileRef = 18CDE64A250D7F6B006DFAAB /* notSavedDetails.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +42,12 @@
 		1892FEE22503E6FD00C02C1D /* ActionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionsViewController.swift; sourceTree = "<group>"; };
 		1892FEE32503E6FD00C02C1D /* ActionsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ActionsViewController.xib; sourceTree = "<group>"; };
 		18CDE641250D4EEC006DFAAB /* LocationItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationItem.swift; sourceTree = "<group>"; };
+		18CDE645250D7F6B006DFAAB /* addTitle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = addTitle.png; sourceTree = "<group>"; };
+		18CDE646250D7F6B006DFAAB /* savedDetails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = savedDetails.png; sourceTree = "<group>"; };
+		18CDE647250D7F6B006DFAAB /* currentLocation.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = currentLocation.png; sourceTree = "<group>"; };
+		18CDE648250D7F6B006DFAAB /* locationSaved.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = locationSaved.png; sourceTree = "<group>"; };
+		18CDE649250D7F6B006DFAAB /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
+		18CDE64A250D7F6B006DFAAB /* notSavedDetails.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = notSavedDetails.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +64,7 @@
 		1892FEAF2503C6AE00C02C1D = {
 			isa = PBXGroup;
 			children = (
+				18CDE644250D7F6B006DFAAB /* Screenshots */,
 				1892FEBA2503C6AE00C02C1D /* MapApp */,
 				1892FEB92503C6AE00C02C1D /* Products */,
 			);
@@ -141,6 +154,19 @@
 			path = Commons;
 			sourceTree = "<group>";
 		};
+		18CDE644250D7F6B006DFAAB /* Screenshots */ = {
+			isa = PBXGroup;
+			children = (
+				18CDE645250D7F6B006DFAAB /* addTitle.png */,
+				18CDE646250D7F6B006DFAAB /* savedDetails.png */,
+				18CDE647250D7F6B006DFAAB /* currentLocation.png */,
+				18CDE648250D7F6B006DFAAB /* locationSaved.png */,
+				18CDE649250D7F6B006DFAAB /* share.png */,
+				18CDE64A250D7F6B006DFAAB /* notSavedDetails.png */,
+			);
+			path = Screenshots;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,9 +225,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18CDE650250D7F6B006DFAAB /* notSavedDetails.png in Resources */,
+				18CDE64E250D7F6B006DFAAB /* locationSaved.png in Resources */,
+				18CDE64F250D7F6B006DFAAB /* share.png in Resources */,
+				18CDE64C250D7F6B006DFAAB /* savedDetails.png in Resources */,
 				1892FEE02503C93E00C02C1D /* LaunchScreen.storyboard in Resources */,
+				18CDE64D250D7F6B006DFAAB /* currentLocation.png in Resources */,
 				1892FEC82503C6B100C02C1D /* Assets.xcassets in Resources */,
 				1892FEE52503E6FD00C02C1D /* ActionsViewController.xib in Resources */,
+				18CDE64B250D7F6B006DFAAB /* addTitle.png in Resources */,
 				1892FEDE2503C93500C02C1D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
