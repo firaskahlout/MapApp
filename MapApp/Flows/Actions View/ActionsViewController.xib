@@ -9,8 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ActionsViewController" customModule="MapApp" customModuleProvider="target">
             <connections>
+                <outlet property="deleteButton" destination="Of9-cL-ky1" id="gof-2K-QEo"/>
                 <outlet property="latitudeLabel" destination="MbK-yl-sZl" id="XJx-14-FjW"/>
                 <outlet property="longitudeLabel" destination="d8h-hV-uDW" id="fjS-YZ-9ht"/>
+                <outlet property="saveButton" destination="1cV-j5-fxi" id="CZK-YN-7qL"/>
+                <outlet property="titleLable" destination="2nd-m7-BfC" id="MHx-e2-Xh7"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Hrt-w6-IbC"/>
             </connections>
         </placeholder>
@@ -59,7 +62,7 @@
                     </subviews>
                 </stackView>
                 <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="aYs-c9-qhx">
-                    <rect key="frame" x="288" y="50" width="76" height="26"/>
+                    <rect key="frame" x="226" y="50" width="138" height="26"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3E-PH-WDk">
                             <rect key="frame" x="0.0" y="-1" width="26" height="27"/>
@@ -80,6 +83,14 @@
                                 <action selector="didTapSaveButton:" destination="-1" eventType="touchUpInside" id="kml-cy-1Tc"/>
                             </connections>
                         </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Of9-cL-ky1">
+                            <rect key="frame" x="92" y="0.0" width="46" height="26"/>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                            <state key="normal" title="Delete"/>
+                            <connections>
+                                <action selector="didTapDeleteButton:" destination="-1" eventType="touchUpInside" id="IwZ-gM-3JC"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dKq-vT-8eg">
@@ -89,15 +100,24 @@
                         <constraint firstAttribute="height" constant="0.69999999999999996" id="eh7-vc-GH5"/>
                     </constraints>
                 </view>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nd-m7-BfC">
+                    <rect key="frame" x="20" y="50" width="43" height="26"/>
+                    <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
+                <constraint firstItem="dKq-vT-8eg" firstAttribute="top" secondItem="2nd-m7-BfC" secondAttribute="bottom" constant="6" id="5zZ-0p-YIC"/>
                 <constraint firstAttribute="trailing" secondItem="aYs-c9-qhx" secondAttribute="trailing" constant="20" id="Cyz-lH-SU2"/>
                 <constraint firstItem="dKq-vT-8eg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="KGn-3u-yms"/>
                 <constraint firstItem="NNZ-zW-NB6" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="MPj-gd-VM6"/>
                 <constraint firstAttribute="trailing" secondItem="dKq-vT-8eg" secondAttribute="trailing" id="R1w-KW-n6P"/>
                 <constraint firstItem="aYs-c9-qhx" firstAttribute="top" secondItem="hP1-gp-WX0" secondAttribute="top" constant="6" id="jZ0-jL-N8t"/>
+                <constraint firstItem="2nd-m7-BfC" firstAttribute="top" secondItem="hP1-gp-WX0" secondAttribute="top" constant="6" id="lAd-UG-EZ7"/>
                 <constraint firstItem="dKq-vT-8eg" firstAttribute="top" secondItem="aYs-c9-qhx" secondAttribute="bottom" constant="6" id="meX-15-iuE"/>
+                <constraint firstItem="2nd-m7-BfC" firstAttribute="leading" secondItem="hP1-gp-WX0" secondAttribute="leading" constant="20" id="mgv-ta-IXO"/>
                 <constraint firstItem="NNZ-zW-NB6" firstAttribute="top" secondItem="dKq-vT-8eg" secondAttribute="bottom" constant="12" id="xtg-ob-Dwb"/>
                 <constraint firstAttribute="trailing" secondItem="NNZ-zW-NB6" secondAttribute="trailing" constant="20" id="z86-4E-iz9"/>
             </constraints>

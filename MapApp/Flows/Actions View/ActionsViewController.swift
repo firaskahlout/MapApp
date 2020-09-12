@@ -7,31 +7,33 @@
 //
 
 import UIKit
-import CoreLocation
 
 final class ActionsViewController: UIViewController {
 
     // MARK: Typealias
     
-    typealias ActionHandler = ((ActionType) -> Void)
+    typealias ActionHandler = ((LocationItem.ActionType) -> Void)
     
     // MARK: Outlets
     
+    @IBOutlet private weak var titleLable: UILabel!
+    @IBOutlet private weak var saveButton: UIButton!
+    @IBOutlet private weak var deleteButton: UIButton!
     @IBOutlet private weak var latitudeLabel: UILabel!
     @IBOutlet private weak var longitudeLabel: UILabel!
     
     // MARK: Proparities
     
-    private let coordinate: CLLocationCoordinate2D
+    private let location: LocationItem
     private var handler: ActionHandler?
     
     // MARK: Init
     
     init(
-        coordinate: CLLocationCoordinate2D,
+        location: LocationItem,
         handler: ActionHandler?
     ) {
-        self.coordinate = coordinate
+        self.location = location
         self.handler = handler
         let bundle = Bundle(for: type(of: self))
         super.init(nibName: nil, bundle: bundle)
@@ -45,27 +47,25 @@ final class ActionsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        latitudeLabel.text = String(coordinate.latitude)
-        longitudeLabel.text = String(coordinate.longitude)
+        saveButton.isHidden = location.name != nil
+        deleteButton.isHidden = location.name == nil
+        titleLable.text = location.name ?? "No Title"
+        latitudeLabel.text = String(location.latitude)
+        longitudeLabel.text = String(location.longitude)
     }
     
     // MARK: Actions
     
     @IBAction private func didTapShareButton(_ sender: Any) {
-        dismiss(animated: true) { self.handler?(.share(self.coordinate)) }
+        dismiss(animated: true) { self.handler?(.share(self.location)) }
     }
     
     @IBAction private func didTapSaveButton(_ sender: Any) {
-        dismiss(animated: true) { self.handler?(.save(self.coordinate)) }
+        dismiss(animated: true) { self.handler?(.save(self.location)) }
     }
-}
-
-// MARK: - ActionsView.ActionType
-
-extension ActionsViewController {
-    enum ActionType {
-        case share(_ coordinate: CLLocationCoordinate2D)
-        case save(_ coordinate: CLLocationCoordinate2D)
+    
+    @IBAction private func didTapDeleteButton(_ sender: Any) {
+        dismiss(animated: true) { self.handler?(.delete(self.location)) }
     }
 }
 
